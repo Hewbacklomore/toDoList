@@ -1,0 +1,65 @@
+.list {
+    max-width: 1700px;
+    height: 800px;
+    background-color: #d2d2c0;
+    padding: 100px;
+    &__box {
+        display: grid;
+        grid-template-columns: 400px;
+        grid-template-rows: 100px 350px;
+        margin-right: 150px;
+    }
+    &__control {
+        width: 400px;
+        height: 50px;
+        padding: 10px;
+        background-color: #06061d;
+        opacity: 0.9;
+        color: #a2721e;
+    }
+    &__text {
+        &_area {
+            width: 400px;
+            height: 300px;
+            background-color: #06061d;
+            opacity: 0.9;
+            color: #a2721e;
+            font-size: 21px;
+            padding: 30px 18px 22px 21px;
+        }
+    }
+    &__btn {
+        border-radius: 22px;
+        width: 118px;
+        height: 47px;
+        background-color: #b48eb4;
+    }
+    .wishes {
+        display: flex;
+        flex-wrap: wrap;
+        width: 900px;
+        max-height: 900px;
+        &__box {
+            display: block;
+            padding: 10px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border-style: outset;
+            box-shadow: 0 0 14px 1px rgba(0, 0, 0, 3.2);
+            border-radius: 15px;
+            width: 250px;
+            height: 120px;
+            background-color: #aeaebd;
+            border-color: black
+        }
+        &__title {
+            font-size: 13px;
+            color: black;
+        }
+    }
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 1400px;
+    }
+}
