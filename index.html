@@ -20,12 +20,15 @@
             </div>
             <div class="list__text">
                 <label class="list__text_descr"></label>
-                <textarea name="description"  class = "list__text_area" placeholder="Task body" ></textarea>
+                <textarea id="descr" name="description"  class = "list__text_area" placeholder="Task body" ></textarea>
                 </div>
             </div>
-                <div class="wishes"></div>
+                <div class="wishes">
+                    
+                </div>
             </div>
                 <button type="submit" class="list__btn">Create task</button>
+                <input onclick="this.form.reset()"  type="button" name="reset__form" value="Reset Form" class="list__reset">
             </form>
         </div>
     </main>
@@ -37,3 +40,5 @@
     <script src="js/index.js"></script>
 </body>
 </html>
+
+<!-- onclick="this.form.reset()" -->

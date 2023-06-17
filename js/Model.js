@@ -4,23 +4,22 @@ const Model = {
    storage: null,
    dataKey: 'data_key',
    currentId: 1,
+   selector: document.querySelector('#descr'),
 
 
    getData() {
-        return JSON.parse(localStorage.getItem(this.dataKey)) || this.arr;
+        return JSON.parse(localStorage.getItem(this.dataKey)) || [];
    },
-   arr: [],
    addCurrentId(id) {
         return this.getData().find(item => {
             return item.id === id
         })
    },
-
    postData(data) {
         const getData = this.getData();
-        const newData = {...data, id: this.currentId};
-        this.arr.push(newData);
-        this.storage.setItem(this.dataKey, JSON.stringify(this.arr));
+        const newData = {...data, id: this.currentId, description: this.selector.value};
+        getData.push(newData);
+        this.storage.setItem(this.dataKey, JSON.stringify(getData));
         const savedCurruentId = this.addCurrentId(this.currentId);
         this.currentId += 1;
         return savedCurruentId;
